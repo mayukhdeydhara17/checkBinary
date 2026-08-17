@@ -1,95 +1,146 @@
-# Binary Number Validator in C++
+# Binary Number & 1's Complement in C++
 
-A simple C++ program that accepts a binary number as input and checks whether it contains only `0` and `1`.
+## 📌 Project Overview
 
-## 📌 Description
+This is a simple **C++ Object-Oriented Programming (OOP)** project that works with binary numbers.
 
-This project demonstrates the use of:
+The program:
 
-* Classes and objects
-* Private data members
-* Member functions
-* `std::string`
-* String indexing using `at()`
-* Input validation
+* Takes a binary number as input.
+* Checks whether the input contains only `0` and `1`.
+* Displays the original binary number.
+* Calculates its **1's complement**.
+* Displays the complemented binary number.
 
-The program creates a `binary` class that stores a binary number as a string. The `chk_bin()` function checks every character and displays an error message if an invalid character is found.
+The project demonstrates how **classes, objects, member functions, strings, loops, and conditional statements** work together in C++.
 
-## 🚀 How It Works
+## 🚀 Features
 
-1. The program asks the user to enter a binary number.
-2. The input is stored as a string.
-3. Each character is checked.
-4. If every character is either `0` or `1`, the input is considered valid.
-5. If any other character is found, the program displays:
+* 🔢 Binary number input
+* ✅ Binary input validation
+* 🔄 1's complement calculation
+* 🖥️ Original binary number display
+* 📊 Complemented binary number display
+* 🛑 Invalid input detection
 
-   ```text
-   INVALID BINARY INPUT
-   ```
+## 🧠 How 1's Complement Works
 
-## 💻 Example
+In a binary number, the **1's complement** is obtained by changing:
 
-### Valid Input
+```text
+0 → 1
+1 → 0
+```
+
+### Example
+
+```text
+Original:     10110010
+1's Complement: 01001101
+```
+
+## 🏗️ OOP Concepts Used
+
+### Class
+
+The program creates a `binary` class to store and manipulate the binary number.
+
+### Object
+
+An object named `b` is created in `main()`:
+
+```cpp
+binary b;
+```
+
+### Member Functions
+
+The class contains several functions:
+
+* `read()` → Takes binary input.
+* `chk_bin()` → Checks whether the input is valid.
+* `display()` → Displays the original binary number.
+* `ones_complement()` → Calculates the 1's complement.
+* `display_complement()` → Displays the complemented number.
+
+## 🔍 Program Flow
+
+```text
+Start
+  ↓
+Enter Binary Number
+  ↓
+Check Binary Input
+  ↓
+Is Input Valid?
+ ┌───────────────┐
+ │               │
+No              Yes
+ ↓               ↓
+Error        Display Number
+                ↓
+          Calculate 1's Complement
+                ↓
+          Display Complement
+                ↓
+               End
+```
+
+## 💻 Example Output
 
 ```text
 Enter your binary number
 101101
+
+DISPLAYING YOUR BINARY NUMBER
+101101
+
+DISPLAYING YOUR COMPLEMENTED BINARY NUMBER
+010010
 ```
 
-The input is valid, so the program terminates normally.
-
-### Invalid Input
+### Invalid Input Example
 
 ```text
 Enter your binary number
-101201
+102101
+
 INVALID BINARY INPUT
 ```
 
-Since `2` is not a valid binary digit, the program rejects the input.
+## 🛠️ Technologies Used
 
-## 🛠️ Requirements
+* **Language:** C++
+* **Concept:** Object-Oriented Programming
+* **Header Files:** `<iostream>`, `<string>`
 
-* C++ compiler supporting C++11 or later
-* A terminal or command prompt
+## 🎯 Learning Objectives
 
-## ▶️ Compilation and Execution
+This project helped me practice:
 
-Using `g++`:
-
-```bash
-g++ main.cpp -o binary
-./binary
-```
-
-On Windows:
-
-```bash
-g++ main.cpp -o binary.exe
-binary.exe
-```
-
-## 📂 Project Structure
-
-```text
-.
-├── main.cpp
-└── README.md
-```
-
-## 📚 Concepts Demonstrated
-
-This project is useful for beginners learning **Object-Oriented Programming (OOP) in C++**, particularly:
-
-* Classes
-* Objects
-* Encapsulation
+* Classes and objects
+* Access specifiers
 * Member functions
-* Strings
-* Loops
-* Conditional statements
+* `string` manipulation
+* `for` loops
+* `if-else` conditions
+* Character comparison
 * Input validation
+* Basic binary operations
+* OOP-based program structure
 
-## 📄 License
+## 🔮 Future Improvements
 
-This project is intended for educational and learning purposes.
+Possible improvements include:
+
+* Add **2's complement**
+* Add binary addition
+* Add binary subtraction
+* Add decimal-to-binary conversion
+* Add binary-to-decimal conversion
+* Create a menu-driven interface
+* Improve error handling
+
+## 📚 Conclusion
+
+This project is a small but useful introduction to **OOP in C++**. It combines basic programming concepts with binary number operations and provides a practical way to understand how classes and member functions can be used to organize a program.
